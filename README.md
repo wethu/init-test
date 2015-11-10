@@ -17,9 +17,8 @@ $ rails s
 [2015-11-11 08:02:32] INFO  ruby 2.1.0 (2013-12-25) [x86_64-darwin14.0]
 [2015-11-11 08:02:32] INFO  WEBrick::HTTPServer#start: pid=30051 port=3000
 ```
-2, Visit `/` 
 
-Notice <h1> bar
+2, Visit `/` and Notice: <h1> bar </h1>
 
 3, modify `app/controllers/foos_controller.rb` 
 
@@ -29,4 +28,4 @@ that won't break it. I chose to put a # on its own line for example
 
 Exception.
 
-Not sure what i'm doing wrong here. 
+Not sure what i'm doing wrong here. To fix, i simply restart WEBrick.
