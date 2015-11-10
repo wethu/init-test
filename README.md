@@ -1,10 +1,12 @@
 
 == Bug or My misconfig?
-`undefined method `bar' for nil:NilClass`
+
+`undefined method 'bar' for nil:NilClass`
 
 Steps to reproduce:
 
 1, Start the server
+
 ```
 $ rails s
 => Booting WEBrick
@@ -19,4 +21,5 @@ $ rails s
 Notice bar
 
 3, edit app/controllers/foos_controller.rb in any way, i chose to put a # on its own line for example
+
 4, visit /
