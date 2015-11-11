@@ -1,5 +1,5 @@
 
-**Bug or My misconfig?
+##Bug or My misconfig?
 
 `undefined method 'bar' for nil:NilClass`
 
