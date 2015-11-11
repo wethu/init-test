@@ -1,5 +1,5 @@
 
-== Bug or My misconfig?
+**Bug or My misconfig?
 
 `undefined method 'bar' for nil:NilClass`
 
@@ -22,7 +22,16 @@ $ rails s
 
 3, modify `app/controllers/foos_controller.rb` 
 
-that won't break it. I chose to put a # on its own line for example
+that won't break it (keeping the call to Foo.configuration.bar). I chose to put a `#comment` on its own line
+for example:
+```
+class FoosController < ApplicationController
+  def index
+    @foo = Foo.configuration.bar
+    # keep the call to Foo.configuration.bar, but modify this file like this line does
+  end
+end
+```
 
 4, visit `/` 
 
