@@ -38,3 +38,13 @@ end
 Exception.
 
 Not sure what i'm doing wrong here. To fix, i simply restart WEBrick.
+
+###Resolution:
+
+```
+<bricker> wethu: autoload (i.e. Rails automatic class reloading in development) is messing you up
+<bricker> wethu: you configure in an initialize, which populates Foo.configuration. Then you make a change and Rails automatically reloads your classes, reinitializing Foo and resetting Foo.configuration
+```
+
+Thanks Bricker!
+
